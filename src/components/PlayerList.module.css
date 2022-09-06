@@ -1,5 +1,5 @@
 .table {
-    width: 70%;
+    width: 100%;
 }
 
 .tableRow {
@@ -17,16 +17,10 @@
     width: 20px;
 }
 
-.playerTable {
-    width: 75%;
-    min-height: 100vh;
-}
-
-.playerRow {
-    display: flex;
-    flex-direction: column;
-}
-
-.playerData {
-    font-size: medium;
+.searchBar {
+    width: 100%;
+    height: 30px;
+    border: 1px solid black;
+    border-radius: 4px;
+    margin-bottom: 10px;
 }
