@@ -1,23 +1,32 @@
-import logo from './logo.svg';
 import './App.css';
+import PlayerList from './components/PlayerList';
+import MyTeam from './components/MyTeam';
+import Players from './data/players.json';
+import {useState} from 'react';
 
 function App() {
+
+  const [availablePlayers, setAvailablePlayers] = useState(Players);
+  const [myTeam, setMyTeam] = useState([]);
+  const [draftStatus, setDraftStatus] = useState();
+
+  function draftPlayer(id) {
+      let myNewTeam = availablePlayers.filter(player => player.id === id);
+      setMyTeam(myNewTeam);
+      
+      const newPlayerList = availablePlayers.filter(player => player.id !== id);
+      setAvailablePlayers(newPlayerList);
+  }
+  
+  function playerTaken(id) {
+      const newPlayerList = availablePlayers.filter(player => player.id !== id);
+      setAvailablePlayers(newPlayerList);
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <PlayerList players={availablePlayers} myTeam={myTeam} draftPlayer={draftPlayer} playerTaken={playerTaken} />
+      <MyTeam myTeam={myTeam} />
     </div>
   );
 }

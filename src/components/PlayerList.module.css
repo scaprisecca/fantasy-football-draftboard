@@ -1,0 +1,32 @@
+.table {
+    width: 70%;
+}
+
+.tableRow {
+    height: 20px;
+    text-align: center;
+}
+
+.tableRow:first-child {
+    display: flex;
+    justify-content: space-around;
+}
+
+.tableIcon {
+    height: 20px;
+    width: 20px;
+}
+
+.playerTable {
+    width: 75%;
+    min-height: 100vh;
+}
+
+.playerRow {
+    display: flex;
+    flex-direction: column;
+}
+
+.playerData {
+    font-size: medium;
+}
