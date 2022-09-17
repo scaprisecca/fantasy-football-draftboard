@@ -79,6 +79,14 @@
     position: absolute;
 }
 
+.filterDropdown { 
+    height: 35px;
+    width: 100px;
+    margin-right: 1rem;
+    border-radius: 25px;
+    padding-left: 10px;
+}
+
 /* -- Draft Board -- */
 
 .draftboard {
