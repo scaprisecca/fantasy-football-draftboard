@@ -6,8 +6,10 @@ const PlayerList = ({players, draftPlayer, playerTaken}) => {
 
     return ( 
         <div>
-            <FilterButton data={players} filterBy={'position'} />
-            <FilterButton data={players} filterBy={'team'} />
+            <span className='filterLabel'>Position:</span>
+            <FilterButton data={players} filterBy={'position'} filterPlayers={value => setSearchTerm(value)} />
+            <span className='filterLabel'>Team:</span>
+            <FilterButton data={players} filterBy={'team'} filterPlayers={value => setSearchTerm(value)} />
             {/* Search for players */}
             <input
                 className='searchBar'
@@ -33,7 +35,7 @@ const PlayerList = ({players, draftPlayer, playerTaken}) => {
                     {players.filter((search) => {
                         if (searchTerm == '') {
                             return search;
-                        } else if (search.name.toLocaleLowerCase().includes(searchTerm.toLocaleLowerCase())) {
+                        } else if (search.name.toLocaleLowerCase().includes(searchTerm.toLocaleLowerCase()) || search.position.toLocaleLowerCase().includes(searchTerm.toLocaleLowerCase()) || search.team.toLocaleLowerCase().includes(searchTerm.toLocaleLowerCase())) {
                             return search;
                         }
                         }).map((player, id) => (

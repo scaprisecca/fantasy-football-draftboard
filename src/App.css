@@ -87,6 +87,10 @@
     padding-left: 10px;
 }
 
+.filterLabel {
+    margin-right: 8px;
+}
+
 /* -- Draft Board -- */
 
 .draftboard {
