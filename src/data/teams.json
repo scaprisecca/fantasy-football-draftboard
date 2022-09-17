@@ -1,0 +1,62 @@
+[
+ {
+   "id": 1,
+   "team_name": "Gingneers",
+   "coach_name": "Lucas"
+ },
+ {
+   "id": 2,
+   "team_name": "Taylor Made",
+   "coach_name": "Josh"
+ },
+ {
+   "id": 3,
+   "team_name": "Brutal Poodles",
+   "coach_name": "Jay"
+ },
+ {
+   "id": 4,
+   "team_name": "Stat Boi",
+   "coach_name": "Jared"
+ },
+ {
+   "id": 5,
+   "team_name": "Fighting Fusa's",
+   "coach_name": "Fusa"
+ },
+ {
+   "id": 6,
+   "team_name": "Cowpies",
+   "coach_name": "Jish"
+ },
+ {
+   "id": 7,
+   "team_name": "Trippers",
+   "coach_name": "Caleb"
+ },
+ {
+   "id": 8,
+   "team_name": "Mystery",
+   "coach_name": "Doug"
+ },
+ {
+   "id": 9,
+   "team_name": "Naruto",
+   "coach_name": "Brandon"
+ },
+ {
+   "id": 10,
+   "team_name": "Team Paco",
+   "coach_name": "Paco"
+ },
+ {
+   "id": 11,
+   "team_name": "Great Scott",
+   "coach_name": "Scott"
+ },
+ {
+   "id": 12,
+   "team_name": "Bmore Dynasty",
+   "coach_name": "Julian"
+ }
+]

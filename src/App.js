@@ -5,6 +5,8 @@ import Players from './data/players.json';
 import {useState} from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './components/Navbar';
+import PlayerStats from './components/PlayerStats';
+import DraftBoard from './components/DraftBoard';
 
 function App() {
 
@@ -35,7 +37,11 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<PlayerList players={availablePlayers} myTeam={myTeam} draftPlayer={draftPlayer} playerTaken={playerTaken} />} />
+
           <Route path="/myteam" element={<MyTeam myTeam={myTeam} />} />
+
+          <Route path='/playerstats' element={<PlayerStats players={availablePlayers}  />} />
+          <Route path='/draftboard' element={<DraftBoard />} />
         </Routes>
       </div>
     </Router>
