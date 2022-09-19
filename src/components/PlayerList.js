@@ -6,17 +6,21 @@ const PlayerList = ({players, draftPlayer, playerTaken}) => {
 
     return ( 
         <div>
-            <span className='filterLabel'>Position:</span>
-            <FilterButton data={players} filterBy={'position'} filterPlayers={value => setSearchTerm(value)} />
-            <span className='filterLabel'>Team:</span>
-            <FilterButton data={players} filterBy={'team'} filterPlayers={value => setSearchTerm(value)} />
             {/* Search for players */}
-            <input
-                className='searchBar'
-                type="text" 
-                placeholder="Search for Name, Position, or Team" 
-                onChange={event => setSearchTerm(event.target.value)} 
-            />
+           <div className='filterContainer'>
+                <input
+                    className='searchBar'
+                    type="text" 
+                    placeholder="Search for Name, Position, or Team" 
+                    onChange={event => setSearchTerm(event.target.value)} 
+                />
+                <div className='filterBtnContainer'>
+                    <span className='filterLabel'>Position:</span>
+                    <FilterButton data={players} filterBy={'position'} filterPlayers={value => setSearchTerm(value)} />
+                    <span className='filterLabel'>Team:</span>
+                    <FilterButton data={players} filterBy={'team'} filterPlayers={value => setSearchTerm(value)} />
+                </div>
+            </div> 
             
             {/* Table filters to only show players being searched */}
             <table className='table'>
@@ -33,7 +37,7 @@ const PlayerList = ({players, draftPlayer, playerTaken}) => {
                 <tbody>
                     {/* Filters for player being search */}
                     {players.filter((search) => {
-                        if (searchTerm == '') {
+                        if (searchTerm == '' || searchTerm == 'All') {
                             return search;
                         } else if (search.name.toLocaleLowerCase().includes(searchTerm.toLocaleLowerCase()) || search.position.toLocaleLowerCase().includes(searchTerm.toLocaleLowerCase()) || search.team.toLocaleLowerCase().includes(searchTerm.toLocaleLowerCase())) {
                             return search;

@@ -61,8 +61,9 @@
 /* -- Search Bar -- */
 
 .searchBar {
-    width: 100%;
     height: 30px;
+    max-width: 45%;
+    width: 100%;
     border: 1px solid black;
     border-radius: 4px;
     margin-bottom: 10px;
@@ -79,9 +80,19 @@
     position: absolute;
 }
 
+.filterContainer {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.filterBtnContainer {
+    display: inline-block;
+}
+
 .filterDropdown { 
     height: 35px;
-    width: 100px;
+    width: 90px;
     margin-right: 1rem;
     border-radius: 25px;
     padding-left: 10px;
@@ -89,6 +100,7 @@
 
 .filterLabel {
     margin-right: 8px;
+    font-size: .85rem;
 }
 
 /* -- Draft Board -- */
